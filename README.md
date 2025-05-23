@@ -87,9 +87,10 @@ Y ejecutas el programa escribiendo
 a.exe 
 
 Primera iteración:
-{"Foto.jpg", 3},
-{"video.mp4", 34},
-{"Actividad_03", 18},
+
+{"Foto.jpg", 3}
+{"video.mp4", 34}
+{"Actividad_03", 18}
 {"prolog.pl", 15}
 Se espera que salgan en este orden 
 Foto.jpg
