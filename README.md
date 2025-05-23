@@ -88,10 +88,10 @@ a.exe
 
 Primera iteración:
 
-{"Foto.jpg", 3}
-{"video.mp4", 34}
-{"Actividad_03", 18}
-{"prolog.pl", 15}
+* {"Foto.jpg", 3}
+* {"video.mp4", 34}
+* {"Actividad_03", 18}
+* {"prolog.pl", 15}
 Se espera que salgan en este orden 
 Foto.jpg
 prolog.pl
@@ -100,10 +100,10 @@ video.mp4
 ![Imagen con la primera iteración ](image.png)
 
 Segunda iteración:
-{"Foto.jpg", 40},
-{"video.mp4", 5},
-{"Actividad_03", 20},
-{"prolog.pl", 2}
+* {"Foto.jpg", 40},
+* {"video.mp4", 5},
+* {"Actividad_03", 20},
+* {"prolog.pl", 2}
 Se espera que salgan en este orden: 
 prolog.pl
 video.mp4
@@ -112,16 +112,16 @@ Foto.jpg
 ![Imagen con la segunda iteración](image-1.png)
 
 Tercera iteración:
-{"Foto.jpg", 4},
-{"video.mp4", 45},
-{"Actividad_03", 9},
-{"prolog.pl", 2},
-{"documento.pdf", 12},
-{"musica.mp3", 7},
-{"datos.csv", 10},
-{"presentacion.pptx", 25},
-{"backup.zip", 50},
-{"script.js", 3}
+* {"Foto.jpg", 4},
+* {"video.mp4", 45},
+* {"Actividad_03", 9},
+* {"prolog.pl", 2},
+* {"documento.pdf", 12},
+* {"musica.mp3", 7},
+* {"datos.csv", 10},
+* {"presentacion.pptx", 25},
+* {"backup.zip", 50},
+* {"script.js", 3}
 Se espera que salgan en este orden: 
 prolog.pl
 script.js
