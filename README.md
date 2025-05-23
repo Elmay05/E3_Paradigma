@@ -92,6 +92,7 @@ Primera iteración:
 * {"video.mp4", 34}
 * {"Actividad_03", 18}
 * {"prolog.pl", 15}
+  
 Se espera que salgan en este orden 
 1. Foto.jpg
 2. prolog.pl
