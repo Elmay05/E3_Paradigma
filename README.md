@@ -136,5 +136,38 @@ Se espera que salgan en este orden:
 9. video.mp4
 10. backup.zip
 ![Imagen con la tercera iteración](image-2.png)
+
+# Análisis
+### Complejidad temporal
+Para la simulación de la espera de tiempo, tiene una complejidad de O(n), donde n es el tamaño del archivo.
+Gracias a los threads, la funcion para cada archivo se ejecuta de manera concurrente, el tiempo será casi igual al de la descarga mas lenta, dejandonos con la complejidad de O(n) (asumiendo que hay suficientes nucleos para cada thread, si no, la complejidad pasa a ser O(n*m) donde m es el numero de archivos)
+### Otro paradigma 
+Respecto a otras soluciones, le dije a Chat GPT que lo implementara el prolog, dejandome este codigo:
+```prolog
+% Regla para calcular el tiempo y la velocidad de descarga
+% descarga(Nombre, Tamaño, Tiempo, Velocidad)
+descarga(Nombre, Tam, Tiempo, Velocidad) :-
+    Tiempo is (500 + Tam * 100) / 1000,
+    Velocidad is Tam / Tiempo,
+    format("~w se descargo correctamente en ~2f s (~2f MB/s)~n", [Nombre, Tiempo, Velocidad]).
+
+% Predicado principal para ejecutar todas las descargas
+descargas :-
+    descarga("prolog.pl", 2, _, _),
+    descarga("script.js", 3, _, _),
+    descarga("video.mp4", 5, _, _),
+    descarga("musica.mp3", 7, _, _),
+    descarga("datos.csv", 10, _, _),
+    descarga("documento.pdf", 12, _, _),
+    descarga("Actividad_03", 20, _, _),
+    descarga("presentacion.pptx", 25, _, _),
+    descarga("Foto.jpg", 40, _, _),
+    descarga("backup.zip", 50, _, _).
+``` 
+Este ocupa el paradigma logico, prolog no ejecuta de manera paralela ni concurrente, en éste se simula como conjunto de echos y reglas, no existe un metodo para calcular el tiempo en prolog, entonces este solo hace operaciones matematicas teniendo una complejidad de O(1), sin embargo, como este checa cada archivo de manera individual, su complejidad todal es de O(m).
+
+### Comparación 
+La implementación en C++ con threads permite simular varias descargas al "mismo tiempo" haciendo un buen escenario y realista para la simulación de un tester de velocidad, esta es mas compleja pero mas cercana a la realidad gracias a los hilos y el temporizador, mientras que prolog es mas teórica y declarativa, es bueno para mostrar la lógica del problema pero la limita la parte del tiempo que no hay algo qeu lo pueda calcular y la interacción con recursos del sistema (threads->nucleos).
+
 # Bibliografía
 (S/f). Codigofacilito.com. Recuperado el 22 de mayo de 2025, de https://codigofacilito.com/articulos/programacion-concurrente
