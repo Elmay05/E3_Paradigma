@@ -9,11 +9,13 @@ Esto es importante ya que lo pensé como una parte de un tester para probar en c
 # Modelos
 Mi programa primero define una función que simula la descarga de un archivo, entra el nombre del archivo y su supuesto peso, mide el tiempo que tomó la descarga, calcula la velocidad y muestra los resultados.
 En el main se crea la lista de archivos con los supuestos tamaños, se crea 1 thread para cada archivo para trabajarlos de manera simultanea y espera a que los threads se terminen para acabar el programa.
+
 <img src="https://github.com/user-attachments/assets/f5790380-00bc-4f1d-aad7-f6cb52de3d02" alt="Imagen de WhatsApp" width="400">
 
 
 Respecto al paradigma, en este inicia el programa donde se crea el vector de thread, para cada uno de los archivos se crea un thread y se manda a hacer la función en estos, estos se ejecutan de manera concurrente y se terminan de ejecutar en el momento en el que todos los threads terminan con la función 
-<img src="https://github.com/user-attachments/assets/f246c346-52c5-4f3b-b462-0f201dc631d3" alt="Imagen de WhatsApp" width="400">
+
+<img src="https://github.com/user-attachments/assets/f246c346-52c5-4f3b-b462-0f201dc631d3" alt="Imagen de WhatsApp 2" width="400">
 
 Para este proyecto ocupamos el paradigma concurrente, este segun códigofacilito "El poder realizar múltiples cosas en el mismo tiempo, pero, no específicamente en paralelo", esa podría realizarse de manera paralela si el sistema lo permite, pero esto no lo controlo desde el codigo, la concurrencia no garantiza que las descargas se ejecuten al mismo tiempo, a comparacion del paralelo que este lo hace con varios nucleos.
 https://codigofacilito.com/articulos/programacion-concurrente
