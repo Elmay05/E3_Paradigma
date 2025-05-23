@@ -12,6 +12,7 @@ En el main se crea la lista de archivos con los supuestos tamaños, se crea 1 th
 ![Imagen de WhatsApp 2025-05-22 a las 19 56 36_5b45e1e2](https://github.com/user-attachments/assets/f5790380-00bc-4f1d-aad7-f6cb52de3d02)
 
 Respecto al paradigma, en este inicia el programa donde se crea el vector de thread, para cada uno de los archivos se crea un thread y se manda a hacer la función en estos, estos se ejecutan de manera concurrente y se terminan de ejecutar en el momento en el que todos los threads terminan con la función 
+![Imagen de WhatsApp 2025-05-22 a las 20 04 43_16de2628](https://github.com/user-attachments/assets/f246c346-52c5-4f3b-b462-0f201dc631d3)
 
 Para este proyecto ocupamos el paradigma concurrente, este segun códigofacilito "El poder realizar múltiples cosas en el mismo tiempo, pero, no específicamente en paralelo", esa podría realizarse de manera paralela si el sistema lo permite, pero esto no lo controlo desde el codigo, la concurrencia no garantiza que las descargas se ejecuten al mismo tiempo, a comparacion del paralelo que este lo hace con varios nucleos.
 https://codigofacilito.com/articulos/programacion-concurrente
