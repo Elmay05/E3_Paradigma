@@ -173,10 +173,18 @@ descargas :-
     descarga("Foto.jpg", 40, _, _),
     descarga("backup.zip", 50, _, _).
 ``` 
-Este ocupa el paradigma logico, prolog no ejecuta de manera paralela ni concurrente, en éste se simula como conjunto de echos y reglas, no existe un metodo para calcular el tiempo en prolog, entonces este solo hace operaciones matematicas teniendo una complejidad de O(1), sin embargo, como este checa cada archivo de manera individual, su complejidad todal es de O(m).
+Este ocupa el paradigma logico, este paradigma no permite una ejecución paralela o concurrente como en c++ pero es util para la representar la lógica del problema mediante reglas.
+En éste se simula como conjunto de echos y reglas, no existe un metodo para calcular el tiempo en prolog ni concurrencia, por ende todas las descargas se simulan de manera secuencial, cada una de éstas se evalua de manera independiente y el tiempo calculado es un estimado, la complejidad asintotica se estima por medio de los archivos a analizar, ya qeu cada llamada maneja operaciones matemáticas simples, por ello la complejidad es de O(n) siendo "n" la cantidad de archivos que se van a simular
 
 ### Comparación 
-La implementación en C++ con threads permite simular varias descargas al "mismo tiempo" haciendo un buen escenario y realista para la simulación de un tester de velocidad, esta es mas compleja pero mas cercana a la realidad gracias a los hilos y el temporizador, mientras que prolog es mas teórica y declarativa, es bueno para mostrar la lógica del problema pero la limita la parte del tiempo que no hay algo qeu lo pueda calcular y la interacción con recursos del sistema (threads->nucleos).
+La implementación en C++ con threads permite simular varias descargas de manera concurrente, creando un buen escenario y realista para la simulación de un speed tester de velocidad, esta es mas compleja pero mas cercana a la realidad gracias a los hilos y el temporizador, de igual manera ofrece un mayor nivel de control sobre el rendimiento y la interacción con el sistema.
+
+
+Por otro lado, prolog es mas teórica y declarativa al manejar un paradigma logico, esto tiene como ventaja (como lo dice el nombre del paradigma) el poder representar la estructura logica del problema ya que se centra mas en "¿Qué se busca lograr?" que en como hacerlo, Sin embargo, presenta algunas limitaciones importantes para una simulación práctica, como la falta de recursos de concurrencia o temporizador real, impidiendonos replicar el comportamiento de descargas simultaneas.
+
+El paradigma concurrente se utiliza mas en momentos en los que se ocupa ejecutar múltiples tareas ayudando al mejoramiento del rendimiento, sobre todo el aplicaciones en el que el timepo es crucial, este te permite interacción directa con recursos del sistema.
+Mientras que el paradigma logico se utiliza mas cuando lo qeu se busca la verificación de conocimiento, razonamiento automático o explorar y representar la logica de un problema sin preocuparse por el control del flujo, esta es ideal para prototipar soluciones o validar ideas.
+
 
 # Bibliografía
 (S/f). Codigofacilito.com. Recuperado el 22 de mayo de 2025, de https://codigofacilito.com/articulos/programacion-concurrente
