@@ -176,14 +176,45 @@ descargas :-
 Este ocupa el paradigma logico, este paradigma no permite una ejecución paralela o concurrente como en c++ pero es util para la representar la lógica del problema mediante reglas.
 En éste se simula como conjunto de echos y reglas, no existe un metodo para calcular el tiempo en prolog ni concurrencia, por ende todas las descargas se simulan de manera secuencial, cada una de éstas se evalua de manera independiente y el tiempo calculado es un estimado, la complejidad asintotica se estima por medio de los archivos a analizar, ya qeu cada llamada maneja operaciones matemáticas simples, por ello la complejidad es de O(n) siendo "n" la cantidad de archivos que se van a simular
 
+De igual manera se le pidió qeu lo implementara en paradigma de scripting dejandonos el siguiente codigo en python:
+```python
+import time
+
+# Lista de documentos como tuplas (nombre, tamaño en MB)
+docs = [
+    ("Foto.jpg", 4),
+    ("video.mp4", 45),
+    ("Actividad_03", 9),
+    ("prolog.pl", 2),
+    ("documento.pdf", 12),
+    ("musica.mp3", 7),
+    ("datos.csv", 10),
+    ("presentacion.pptx", 25),
+    ("backup.zip", 50),
+    ("script.js", 3)
+]
+
+# Recorremos la lista y simulamos la descarga de cada uno
+for nombre, tamaño in docs:
+    inicio = time.perf_counter()
+    time.sleep(0.5 + tamaño * 0.1)  # espera simulada: 500ms + 100ms por MB
+    fin = time.perf_counter()
+    duracion = fin - inicio
+    velocidad = tamaño / duracion
+    print(f"{nombre} se descargó correctamente en {duracion:.2f}s ({velocidad:.2f}MB/s)")
+```
+Al ocupar paradigma de scripting, todo se ejecuta en el cuerpo principal del script, usa solo un for, sleep y print en su implementación, está automatizada en orden y se entiende facilmente sin conocimiento de paradigmas complejos, tiene complejidad asintotica de O(n) siendo n la canidad de archivos qeu hay en el arreglo.
 ### Comparación 
 La implementación en C++ con threads permite simular varias descargas de manera concurrente, creando un buen escenario y realista para la simulación de un speed tester de velocidad, esta es mas compleja pero mas cercana a la realidad gracias a los hilos y el temporizador, de igual manera ofrece un mayor nivel de control sobre el rendimiento y la interacción con el sistema.
 
 
 Por otro lado, prolog es mas teórica y declarativa al manejar un paradigma logico, esto tiene como ventaja (como lo dice el nombre del paradigma) el poder representar la estructura logica del problema ya que se centra mas en "¿Qué se busca lograr?" que en como hacerlo, Sin embargo, presenta algunas limitaciones importantes para una simulación práctica, como la falta de recursos de concurrencia o temporizador real, impidiendonos replicar el comportamiento de descargas simultaneas.
 
+En el tercer codigo, Python forma parte del paradigma de scripting, cuyo objetivo es resolver problemas de forma rápida y directa sin necesidad de estructuras complejas. La implementación es sencilla: la lista se define y los elementos y se inicializan mediante un ciclo for, todo desde el script principal, sin funciones externa. Puede usar esta opción para tareas automatizadas, pruebas rápidas o mantenimiento.
+
 El paradigma concurrente se utiliza mas en momentos en los que se ocupa ejecutar múltiples tareas ayudando al mejoramiento del rendimiento, sobre todo el aplicaciones en el que el timepo es crucial, este te permite interacción directa con recursos del sistema.
 Mientras que el paradigma logico se utiliza mas cuando lo qeu se busca la verificación de conocimiento, razonamiento automático o explorar y representar la logica de un problema sin preocuparse por el control del flujo, esta es ideal para prototipar soluciones o validar ideas.
+En cambio, paradigma de scripting suele utilizarse mas en tareas de configuración o mantenimiento ya que se utiliza para problemas que se quieren resolver rapidamente sin tener que crear codigos complejos o aplicaciones enormes, buscan automatizar cualquier tarea que pudiera realizarse por medio del shell.
 
 
 # Bibliografía
